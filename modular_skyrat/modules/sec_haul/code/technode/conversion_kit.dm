@@ -9,3 +9,18 @@
 /obj/item/weaponcrafting/gunkit/sol_bolt_to_rifle
 	name = "Romulus Battle Rifle Conversion Kit"
 	desc = "A Romulus-produced conversion kit. This kit comes with a modified sear to enable seamless full-automatic fire - at the cost of overall accuracy. This kit includes a new set of trim, but otherwise uses a lot of the hardware from the RomTech rifle. Accepts any standard Sol rifle magazine."
+
+/obj/item/weaponcrafting/gunkit/cck_to_glocknineteen
+
+	name = "General Pistol Number 9 Conversion Kit"
+	desc = "A Romulus-produced conversion kit. This kit comes with replacement for the recoil spring, frame slides and improved barrel, accepts any 9x25mm Magazines."
+
+/obj/item/weaponcrafting/gunkit/cck_to_glockeightteen
+
+	name = "General Pistol Number 8 Conversion Kit"
+	desc = "A Romulus-produced conversion kit. This kit comes with replacement for the recoil spring, frame slides and improved barrel, accepts any 9x25mm Magazines."
+
+
+/obj/item/weaponcrafting/gunkit/det_to_signalisrevolver
+	name = "Revolver Conversion Kit"
+	desc = "A Romulus-produced conversion kit. This kit fully replaces the standard colt detective revolver and convert it to fire 10mm."

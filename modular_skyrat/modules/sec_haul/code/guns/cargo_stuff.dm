@@ -113,13 +113,14 @@
 	contains = list(/obj/item/choice_beacon/security_pistol = 2,
 	)
 	crate_name = "Nanotrasen Sidearm Crate"
+	special = TRUE //I'll explain why in a future PR that this isn't just removed
 
 // RomFed Gun
 
 /datum/supply_pack/security/armory/cmg
 	name = "Romulus Technology CMG Assault Rifle Crate"
 	desc = "Two CMG-1, chambered in experimental steel flechette."
-	cost = CARGO_CRATE_VALUE * 20
+	cost = CARGO_CRATE_VALUE * 40
 	contains = list(
 		/obj/item/gun/ballistic/automatic/rom_flech = 2,
 		/obj/item/ammo_box/magazine/caflechette = 2,
@@ -129,7 +130,7 @@
 /datum/supply_pack/security/armory/rom_ceremonial_rifle
 	name = "Romulus Ceremonial Bolt Action Rifle Crate"
 	desc = "Contains Three Ceremonial Bolt Action Rifle in .40 , as well as ammo for it."
-	cost = CARGO_CRATE_VALUE * 12
+	cost = CARGO_CRATE_VALUE * 24
 	contains = list(/obj/item/gun/ballistic/rifle/carwil = 3,
 		/obj/item/ammo_box/magazine/c40sol_rifle = 3,
 	)
@@ -151,26 +152,12 @@
 
 /datum/supply_pack/security/armory/kiboko_riot
 	name = "Kiboko 25mm Riot Pack"
-	cost = CARGO_CRATE_VALUE * 8
-	desc = "Contains three riot grade ammunition box."
+	cost = CARGO_CRATE_VALUE * 5
+	desc = "Contains six riot grade ammunition boxes."
 	contains = list(
-		/obj/item/ammo_box/c980grenade/riot = 3,
+		/obj/item/ammo_box/c980grenade/riot = 6,
 	)
 
-/*
-/datum/supply_pack/imports/lmg
-	name = "Smuggled Sol Light Machinegun Crate"
-	desc = "(*!&@#GOOD NEWS, OPERATIVE! WE GOT YOU THE BIG LEAGUE AUTOMATIC WEAPONS. BY \
-		SMUGGLING THIS CRATE THROUGH A FEW OUTDATED CUSTOMS CHECKPOINTS, WE'VE THE NEXT BEST THING! \
-		A FUCKING LIGHT MACHINE GUN. DON'T WORRY, THE RUMORS ABOUT THE GUN MELTING YOU ARE JUST THAT! RUMORS! \
-		THESE THINGS WORK FINE! MIGHT BE SLIGHTLY DIRTY.!#@*$"
-	hidden = TRUE
-	cost = CARGO_CRATE_VALUE * 52
-	contains = list(
-		/obj/item/gun/ballistic/automatic/sol_rifle/machinegun = 1,
-		/obj/item/ammo_box/magazine/c40sol_rifle/drum = 2,
-	)
-*/ //BUBBER EDIT: IT'S AS BAD AS YOU THOUGHT
 
 /datum/supply_pack/imports/infanterie
 	name = "Carwil Battle Rifle Crate"

@@ -20,7 +20,7 @@
 	icon = 'modular_skyrat/modules/modular_weapons/icons/obj/company_and_or_faction_based/nanotrasen_system_inc/pistol.dmi'
 	icon_state = "black"
 	w_class = WEIGHT_CLASS_NORMAL
-	spread = 10
+	spread = 8
 	fire_sound = 'sound/items/weapons/gun/pistol/shot_alt.ogg'
 	rack_sound = 'sound/items/weapons/gun/pistol/rack.ogg'
 	lock_back_sound = 'sound/items/weapons/gun/pistol/slide_lock.ogg'
@@ -40,7 +40,7 @@
 /obj/item/storage/toolbox/guncase/skyrat/nt_glock_spec
 	name = "9x25mm Mk2 Special Operation Pistol"
 
-	weapon_to_spawn = /obj/item/gun/ballistic/automatic/pistol/nt_glock/empty
+	weapon_to_spawn = /obj/item/gun/ballistic/automatic/pistol/nt_glock/spec/empty
 
 /obj/item/storage/toolbox/guncase/skyrat/pistol/trappiste_small_case/nt_glock_spec/PopulateContents()
 	new weapon_to_spawn (src)
@@ -55,11 +55,14 @@
 	desc = "General Purpose Pistol Number 9, 3-Round Burst. A special operation variant with a high capacity magazine."
 	icon = 'modular_skyrat/modules/modular_weapons/icons/obj/company_and_or_faction_based/nanotrasen_system_inc/pistol.dmi'
 	icon_state = "silver"
-	spread = 17
+	spread = 13
 	pin = /obj/item/firing_pin
 	fire_delay = 2
 	burst_size = 3
 	spawn_magazine_type = /obj/item/ammo_box/magazine/m9mm/stendo
+
+/obj/item/gun/ballistic/automatic/pistol/nt_glock/spec/empty
+	spawnwithmagazine = FALSE
 
 //Magistrate Pistol
 

@@ -1,5 +1,5 @@
 /obj/item/ammo_casing/caflechette
-	name = "flechette steel penetrator"
+	name = "flechette steel penetrator (Armour Piercing)"
 	desc = "A Romfed standard rifle flechette."
 
 	icon = 'modular_skyrat/modules/modular_weapons/icons/obj/company_and_or_faction_based/carwo_defense_systems/ammo.dmi'
@@ -21,23 +21,23 @@
 	name = "flechette penetrator"
 	damage = 15
 	armour_penetration = 60
-	wound_bonus = 10
-	bare_wound_bonus = 10
+	wound_bonus = 5
+	bare_wound_bonus = 5
 	embed_type = /datum/embedding/caflechette
-	dismemberment = 0
+	dismemberment = 0 // THIS MUST NOT DISMEMBER
 
 /datum/embedding/caflechette
 	embed_chance = 55
 	pain_chance = 70
-	fall_chance = 30
+	fall_chance = 50
 	jostle_chance = 80
 	ignore_throwspeed_threshold = TRUE
-	pain_stam_pct = 0.9
-	pain_mult = 2
-	rip_time = 2 SECONDS
+	pain_stam_pct = 0.1
+	pain_mult = 5
+	rip_time = 1 SECONDS
 
 /obj/item/ammo_casing/caflechette/ripper
-	name = "flechette silicon dart"
+	name = "flechette silicon ripper (Wounding)"
 	desc = "A Romfed standard rifle flechette."
 	projectile_type = /obj/projectile/bullet/caflechette/ripper
 	custom_materials = AMMO_MATS_SHOTGUN_FLECH
@@ -45,8 +45,8 @@
 /obj/projectile/bullet/caflechette/ripper
 	name = "flechette dart"
 	damage = 10
-	wound_bonus = 25
-	bare_wound_bonus = 35
+	wound_bonus = 10
+	bare_wound_bonus = 25
 	embed_type = /datum/embedding/ripper
 	armour_penetration = 40 //defeat basic armour
 
@@ -61,37 +61,35 @@
 	rip_time = 5 SECONDS
 
 /obj/item/ammo_casing/caflechette/ballpoint
-	name = "steel ball"
+	name = "ballistic steel ball (Less Lethal)"
 	desc = "A bullet casing with a large metallic ball as a projectile."
 	projectile_type = /obj/projectile/bullet/caflechette/ballpoint
 	custom_materials = AMMO_MATS_SHOTGUN_FLECH
 
 /obj/projectile/bullet/caflechette/ballpoint
 	name = "high velocity steel ball"
-	damage = 10
+	damage = 13
 	wound_bonus = 20
-	bare_wound_bonus = 10
-	sharpness = SHARP_EDGED
-	wound_bonus = 0
 	bare_wound_bonus = 20
-	armour_penetration = 10
+	sharpness = SHARP_EDGED
+	armour_penetration = 20
 	shrapnel_type = /obj/item/shrapnel/stingball
 	embed_type = /datum/embedding/ballpoint
-	stamina = 20
-	ricochet_chance = 50
+	stamina = 24
+	ricochet_chance = 100
 	ricochets_max = 3
 	ricochet_auto_aim_angle = 90
 	ricochet_auto_aim_range = 5
 
 /datum/embedding/ballpoint
-	embed_chance = 50
+	embed_chance = 80
 	fall_chance = 5
 	jostle_chance = 5
 	ignore_throwspeed_threshold = TRUE
-	pain_stam_pct = 0.4
+	pain_stam_pct = 1
 	pain_mult = 2
 	jostle_pain_mult = 3
-	rip_time = 1 SECONDS
+	rip_time = 2 SECONDS
 
 /obj/item/ammo_casing/caflechette/magnesium
 	name = "magnesium rod"
@@ -102,15 +100,15 @@
 	name = "high velocity magnesium rod"
 	damage = 5
 	wound_bonus = 15
-	bare_wound_bonus = 5
+	bare_wound_bonus = 10
 	embed_type = /datum/embedding/magnesium
-	armour_penetration = 100 //does really low damage
+	armour_penetration = 200 //does really low damage
 
 /datum/embedding/magnesium
-	embed_chance = 80
+	embed_chance = 60
 	pain_chance = 10
-	fall_chance = 10
-	jostle_chance = 80
+	fall_chance = 25
+	jostle_chance = 90
 	ignore_throwspeed_threshold = TRUE
 	pain_stam_pct = 0.9
 	pain_mult = 2
@@ -120,5 +118,5 @@
 	. = ..()
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
-		M.adjust_fire_stacks(12)
+		M.adjust_fire_stacks(4)
 		M.ignite_mob()

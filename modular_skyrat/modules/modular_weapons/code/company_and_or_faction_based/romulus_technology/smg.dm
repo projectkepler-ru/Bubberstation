@@ -35,6 +35,8 @@
 
 	actions_types = list()
 
+	projectile_damage_multiplier = 0.8
+
 // added SecLite to MP5 Shaytan thingie - Bangle
 /obj/item/gun/ballistic/automatic/rom_smg/add_seclight_point()
 	AddComponent(/datum/component/seclite_attachable, \

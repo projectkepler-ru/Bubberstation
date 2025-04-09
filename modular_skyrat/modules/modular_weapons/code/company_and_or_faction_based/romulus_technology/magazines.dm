@@ -30,7 +30,8 @@
 
 //Rifle Magazine
 /obj/item/ammo_box/magazine/caflechette
-	name = "flechette penetrator box"
+	name = "flechette penetrator magazine"
+	desc = "A magazine for the cmg weapon system, contains lead core intended to defeat body armour."
 	ammo_type = /obj/item/ammo_casing/caflechette
 	caliber = CALIBER_FLECHETTE
 	icon = 'modular_skyrat/modules/modular_weapons/icons/obj/company_and_or_faction_based/romulus_technology/ammo.dmi'
@@ -40,16 +41,19 @@
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
 /obj/item/ammo_box/magazine/caflechette/ripper
-	name = "flechette ripper box"
+	name = "flechette ripper magazine"
+	desc = "A magazine for the cmg weapon system, this one is intended for causing massive wounds."
 	ammo_type = /obj/item/ammo_casing/caflechette/ripper
 	icon_state = "cmg_ripper"
 
 /obj/item/ammo_box/magazine/caflechette/ballpoint
-	name = "ballpoint box"
+	name = "ballpoint magazine"
+	desc = "A magazine for the cmg weapon system, fires ballistic steelball that puncture the skin and disrupt movement."
 	ammo_type = /obj/item/ammo_casing/caflechette/ballpoint
 	icon_state = "cmg_ballpoint"
 
 /obj/item/ammo_box/magazine/caflechette/magnesium
-	name = "magnesium rod box"
+	name = "magnesium rod magazine"
+	desc = "A magazine for the cmg weapon system, contains magnesium potassium and iron composite to ignite on contact with target."
 	ammo_type = /obj/item/ammo_casing/caflechette/magnesium
 	icon_state = "cmg_incend"

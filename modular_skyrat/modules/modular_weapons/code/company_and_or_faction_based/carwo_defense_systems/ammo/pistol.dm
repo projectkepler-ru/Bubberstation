@@ -20,11 +20,11 @@
 
 /obj/projectile/bullet/c35sol
 	name = ".35 Sol Short bullet"
-	damage = 20
+	damage = 25
 
 	wound_bonus = 5 // Normal bullets are 20
 	bare_wound_bonus = 25
-
+	weak_against_armour = TRUE //Discouraging usage against armoured target. It's one of the most common ammo in the game
 
 /obj/item/ammo_box/c35sol
 	name = "ammo box (.35 Sol Short lethal)"
