@@ -116,6 +116,7 @@
 	reqs = list(
 		/obj/item/gun/ballistic/revolver/c38/detective = 1,
 		/obj/item/weaponcrafting/gunkit/det_to_signalisrevolver = 1,
+	)
 	time = 10 SECONDS
 	category = CAT_WEAPON_RANGED
 
