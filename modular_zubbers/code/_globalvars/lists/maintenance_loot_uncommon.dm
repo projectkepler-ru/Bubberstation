@@ -7,7 +7,6 @@ GLOBAL_LIST_INIT(uncommon_loot, list(//uncommon: useful items
 		/obj/item/ammo_casing/shotgun/dart = 1,
 		/obj/item/ammo_casing/shotgun/dragonsbreath = 1,
 		/obj/item/ammo_casing/shotgun/express = 1,
-		/obj/item/ammo_casing/shotgun/flechette = 1,
 		/obj/item/ammo_casing/shotgun/frag12 = 1,
 		/obj/item/ammo_casing/shotgun/hunter = 1,
 		/obj/item/ammo_casing/shotgun/improvised = 300,

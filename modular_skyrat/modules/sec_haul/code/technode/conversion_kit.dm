@@ -24,7 +24,7 @@
 	name = "Revolver Conversion Kit"
 	desc = "A Romulus-produced conversion kit. This kit fully replaces the standard colt detective revolver and convert it to fire 10mm."
 
-obj/item/weaponcrafting/gunkit/det_to_paradisedet
+/obj/item/weaponcrafting/gunkit/det_to_paradisedet
 	name = "Energy Revolver Kit"
 	desc = "A Romulus-produced conversion kit. This kit fully replaces the standard colt detective revolver, making it fires hardlight energy projectiles."
 
