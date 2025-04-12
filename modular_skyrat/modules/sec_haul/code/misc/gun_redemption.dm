@@ -51,11 +51,6 @@
 	return selectable_gun_types
 
 /obj/item/choice_beacon/station_magistrate/open_options_menu(mob/living/user)
-	if(GLOB.holy_armor_type)
-		consume_use(GLOB.holy_armor_type, user)
-		return
-
-	// Not bothering to cache this stuff because it'll only even be used once
 	var/list/armament_names_to_images = list()
 	var/list/armament_names_to_typepaths = list()
 	for(var/obj/item/storage/box/holy/holy_box as anything in typesof(/obj/item/storage/box/holy))
