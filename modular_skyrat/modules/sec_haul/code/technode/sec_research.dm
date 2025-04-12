@@ -124,25 +124,25 @@
 	desc = "A 12 gauge ammunition box for shotgun shells."
 	id = "s12g_buckshot"
 	build_type = PROTOLATHE | AWAY_LATHE
-	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 20, /datum/material/plastic = SHEET_MATERIAL_AMOUNT * 25)
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 20)
 	build_path = /obj/item/ammo_box/advanced/s12gauge/buckshot
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_CARGO
 
 /datum/design/advancedgaugeboxes_slug
 	name = "12 Gauge Advanced Slug Ammunition Box(Lethal)"
 	desc = "A 12 gauge ammunition box for shotgun shells."
 	id = "s12g_slug"
 	build_type = PROTOLATHE | AWAY_LATHE
-	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 25, /datum/material/plastic = SHEET_MATERIAL_AMOUNT * 25)
+	materials = list(/datum/material/iron = SHEET_MATERIAL_AMOUNT * 25)
 	build_path = /obj/item/ammo_box/advanced/s12gauge
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
-
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_CARGO
+/*
 /datum/design/advancedgaugeboxes_flech
 	name = "12 Gauge Advanced Flechette Ammunition Box(Lethal)"
 	desc = "A 12 gauge ammunition box for shotgun shells."
@@ -154,7 +154,7 @@
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
-
+*/
 /datum/design/advancedgaugeboxes_antitide
 	name = "12 Gauge Advanced Anti Riot Ammunition Box(Less-Lethal)"
 	desc = "A 12 gauge ammunition box for shotgun shells."
@@ -189,7 +189,7 @@
 	category = list(
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
-	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
+	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_CARGO
 
 /datum/design/advancedgaugeboxes_magnum
 	name = "12 Gauge Advanced Magnum Ammunition Box(Very Lethal)"

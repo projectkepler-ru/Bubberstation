@@ -313,3 +313,7 @@
 
 /obj/item/ammo_casing/shotgun/beanbag
 	harmful = FALSE
+
+/obj/projectile/bullet/scattershot
+	damage = 25 //24 - 25, 84 - 100 damages total, this buff also affect nukie mech, which had scattershot
+

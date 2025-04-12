@@ -10,11 +10,6 @@
 /datum/armament_entry/company_import/vitezstvi/ammo_bench/bench_itself
 	item_type = /obj/item/circuitboard/machine/ammo_workbench
 	cost = PAYCHECK_COMMAND * 5
-/*
-/datum/armament_entry/company_import/vitezstvi/ammo_bench/ammo_disk
-	item_type = /obj/item/disk/ammo_workbench/advanced
-	cost = PAYCHECK_COMMAND * 5
-*/
 
 /datum/armament_entry/company_import/vitezstvi/ammo_bench/bullet_drive
 	item_type = /obj/item/circuitboard/machine/dish_drive/bullet
@@ -93,25 +88,13 @@
 
 /datum/armament_entry/company_import/vitezstvi/shot_shells/rubbershot
 	item_type = /obj/item/ammo_box/advanced/s12gauge/rubber
-/*
-/datum/armament_entry/company_import/vitezstvi/shot_shells/magnum_buckshot
-	item_type = /obj/item/ammo_box/advanced/s12gauge/magnum
 
-/datum/armament_entry/company_import/vitezstvi/shot_shells/express_buckshot
-	item_type = /obj/item/ammo_box/advanced/s12gauge/express
-*/
 /datum/armament_entry/company_import/vitezstvi/shot_shells/hunter_slug
 	item_type = /obj/item/ammo_box/advanced/s12gauge/hunter
-/*
-/datum/armament_entry/company_import/vitezstvi/shot_shells/flechettes
-	item_type = /obj/item/ammo_box/advanced/s12gauge/flechette
-*/
+
 /datum/armament_entry/company_import/vitezstvi/shot_shells/hornet_nest
 	item_type = /obj/item/ammo_box/advanced/s12gauge/beehive
-/*
-/datum/armament_entry/company_import/vitezstvi/shot_shells/stardust
-	item_type = /obj/item/ammo_box/advanced/s12gauge/antitide
-*/
+
 /datum/armament_entry/company_import/vitezstvi/shot_shells/confetti
 	item_type = /obj/item/ammo_box/advanced/s12gauge/honkshot
 	cost = PAYCHECK_LOWER
@@ -133,7 +116,6 @@
 
 /datum/armament_entry/company_import/vitezstvi/grenade_shells/shrapnel
 	item_type = /obj/item/ammo_box/c980grenade/shrapnel
-	contraband = TRUE
 
 /datum/armament_entry/company_import/vitezstvi/grenade_shells/phosphor
 	item_type = /obj/item/ammo_box/c980grenade/shrapnel/phosphor

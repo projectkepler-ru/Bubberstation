@@ -11,10 +11,6 @@
 		"solgrenade_extmag",
 		"sol35_shortextmag",
 		"ca_flech",
-		"ca_flechmagnesium",
-		"s12g_slug",
-		"s12c_antitide",
-		"s12g_buckshot"
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
 
@@ -25,7 +21,7 @@
 	prereq_ids = list("explosives","storedmunition_tech")
 	design_ids = list(
 		"sol_rifle_carbine_gun",
-		"s12g_flechette",
+		"ca_flechmagnesium",
 		"s12g_db"
 	)
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = TECHWEB_TIER_2_POINTS)
@@ -69,6 +65,8 @@
 	design_ids += "m9mm_mag"
 	design_ids += "c10mm_rincin"
 	design_ids += "s12g_antitide"
+	design_ids += "s12g_buckshot"
+	design_ids += "s12c_antitide"
 	. = ..()
 
 /datum/techweb_node/exotic_ammo/New()
@@ -77,6 +75,7 @@
 	design_ids += "sol_bolt_to_rifle"
 	design_ids += "c10mm_rhp"
 	design_ids += "c10mm_rap"
+	design_ids += "s12g_slug"
 	. = ..()
 
 /datum/techweb_node/syndicate_basic/New()

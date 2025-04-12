@@ -17,10 +17,14 @@
 
 /obj/item/weaponcrafting/gunkit/cck_to_glockeightteen
 
-	name = "General Pistol Number 8 Conversion Kit"
+	name = "General Pistol Number 9-3 Round Bursts Conversion Kit"
 	desc = "A Romulus-produced conversion kit. This kit comes with replacement for the recoil spring, frame slides and improved barrel, accepts any 9x25mm Magazines."
-
 
 /obj/item/weaponcrafting/gunkit/det_to_signalisrevolver
 	name = "Revolver Conversion Kit"
 	desc = "A Romulus-produced conversion kit. This kit fully replaces the standard colt detective revolver and convert it to fire 10mm."
+
+obj/item/weaponcrafting/gunkit/det_to_paradisedet
+	name = "Energy Revolver Kit"
+	desc = "A Romulus-produced conversion kit. This kit fully replaces the standard colt detective revolver, making it fires hardlight energy projectiles."
+
