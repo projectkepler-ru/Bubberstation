@@ -35,6 +35,7 @@
 	multitype = TRUE
 	multiple_sprites = AMMO_BOX_FULL_EMPTY
 	w_class = WEIGHT_CLASS_NORMAL
+	casing_phrasing = "dart"
 
 /obj/item/ammo_box/magazine/caflechette/ripper
 	name = "flechette ripper magazine"

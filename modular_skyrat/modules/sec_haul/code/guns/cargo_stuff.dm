@@ -33,10 +33,9 @@
 	desc = "Contains 6 boxes of exotic ammunition for all 12 Gauge Shotguns."
 	cost = CARGO_CRATE_VALUE * 20
 	contains = list(/obj/item/ammo_box/advanced/s12gauge/incendiary= 1,
-					/obj/item/ammo_box/advanced/s12gauge/flechette = 1,
+					/obj/item/ammo_box/advanced/s12gauge/frangible = 1,
 					/obj/item/ammo_box/advanced/s12gauge/express = 1,
 					/obj/item/ammo_box/advanced/s12gauge/magnum = 1,
-					/obj/item/ammo_box/advanced/s12gauge/flechette = 1,
 					/obj/item/ammo_box/advanced/s12gauge/antitide = 1,
 				)
 	crate_name = "exotic shotgun ammo crate"
@@ -80,6 +79,8 @@
 	cost = CARGO_CRATE_VALUE * 30
 	contains = list(/obj/item/gun/ballistic/shotgun/riot/sol = 2,
 	/obj/item/ammo_box/advanced/s12gauge/buckshot = 2,
+	/obj/item/storage/pouch/ammo = 2,
+	/obj/item/storage/belt/bandolier = 3,
 	)
 	crate_name = "Carwo 'Renoster' Shotgun Crate"
 
@@ -91,6 +92,7 @@
 	contains = list(
 		/obj/item/gun/ballistic/automatic/sol_smg = 3,
 		/obj/item/ammo_box/magazine/c35sol_pistol = 3,
+		/obj/item/storage/pouch/ammo = 3,
 	)
 	crate_name = "Carwo 'Sindano' Submachinegun Crate"
 
@@ -119,11 +121,12 @@
 
 /datum/supply_pack/security/armory/cmg
 	name = "Romulus Technology CMG Assault Rifle Crate"
-	desc = "Two CMG-1, chambered in experimental steel flechette."
+	desc = "Two CMG-1, chambered in armour piercing flechette cartridges."
 	cost = CARGO_CRATE_VALUE * 40
 	contains = list(
 		/obj/item/gun/ballistic/automatic/rom_flech = 2,
 		/obj/item/ammo_box/magazine/caflechette = 2,
+		/obj/item/storage/pouch/ammo = 2,
 	)
 	crate_name = "RomTech CMG-1 Crate"
 

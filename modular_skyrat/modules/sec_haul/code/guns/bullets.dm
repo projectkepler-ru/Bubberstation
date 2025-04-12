@@ -25,19 +25,20 @@
 
 /obj/item/ammo_casing/c9mm/ihdf
 	name = "9x25mm Mk.12 IHDF casing"
-	desc = "A modern 9x25mm Mk.12 bullet casing. This one fires a bullet of 'Intelligent High-Impact Dispersal Foam', which is best compared to a riot-grade foam dart."
+	desc = "A modern 9x25mm Mk.12 bullet casing. This one fires a bullet of 'Impact High-Impact Dispersal Foam', which is best compared to a riot-grade foam dart."
 	projectile_type = /obj/projectile/bullet/c9mm/ihdf
 	harmful = FALSE
 
 /obj/projectile/bullet/c9mm/ihdf
 	name = "9x25mm IHDF bullet"
-	damage = 30
+	damage = 33
 	damage_type = STAMINA
 	embed_type = /datum/embedding/c9mm_ihdf
+	armour_penetration = 20
 
 /datum/embedding/c9mm_ihdf
-	embed_chance = 0
-	fall_chance = 3
+	embed_chance = 35
+	fall_chance = 40
 	jostle_chance = 4
 	pain_mult = 5
 	pain_stam_pct = 0.4
@@ -55,7 +56,7 @@
 	name = "9x25mm rubber bullet"
 	icon_state = "pellet"
 	damage = 18
-	stamina = 32
+	stamina = 35
 	ricochets_max = 6
 	ricochet_incidence_leeway = 0
 	ricochet_chance = 180

@@ -13,7 +13,7 @@
 	base_icon_state = "9x19pB"
 
 /obj/item/ammo_box/magazine/m9mm/ihdf
-	name = "pistol magazine (9x25mm Intelligent Dispersal Foam)"
+	name = "pistol magazine (9x25mm Impact High Dispersal Foam)"
 	ammo_type = /obj/item/ammo_casing/c9mm/ihdf
 	base_icon_state = "9x19pp"
 
@@ -46,7 +46,7 @@
 	base_icon_state = "g18_ihdf"
 
 /obj/item/ammo_box/magazine/m9mm/stendo/ihdf
-	name = "pistol magazine (9x25mm Intelligent Dispersal Foam)"
+	name = "pistol magazine (9x25mm Impact High Dispersal Foam)"
 	ammo_type = /obj/item/ammo_casing/c9mm/ihdf
 	base_icon_state = "g18_ihdf"
 
