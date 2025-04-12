@@ -22,7 +22,7 @@
 	name = ".35 Sol Short bullet"
 	damage = 25
 
-	wound_bonus = 5 // Normal bullets are 20
+	wound_bonus = 10 // Normal bullets are 20
 	bare_wound_bonus = 25
 	weak_against_armour = TRUE //Discouraging usage against armoured target. It's one of the most common ammo in the game
 
@@ -52,7 +52,6 @@
 
 	projectile_type = /obj/projectile/bullet/c35sol/incapacitator
 	harmful = FALSE
-
 
 /obj/projectile/bullet/c35sol/incapacitator
 	name = ".35 Sol Short incapacitator bullet"
@@ -132,3 +131,49 @@
 	icon_state = "35box_shrapnel"
 
 	ammo_type = /obj/item/ammo_casing/c35sol/ripper
+
+// .35 Sol AP
+
+/obj/item/ammo_casing/c35sol/ap
+	name = ".35 Sol Short ripper bullet casing"
+	desc = "A TerraGov standard caseless ripper pistol round. Causes slashing wounds on targets, but is weak to armor."
+
+	icon_state = "35sol_shrapnel"
+	projectile_type = /obj/projectile/bullet/c35sol/ap
+
+	custom_materials = AMMO_MATS_RIPPER
+	advanced_print_req = TRUE
+
+
+/obj/projectile/bullet/c35sol/ap
+	name = ".35 Sol ripper bullet"
+	damage = 15
+
+	weak_against_armour = TRUE
+
+	sharpness = SHARP_EDGED
+
+	wound_bonus = 25
+	bare_wound_bonus = 25
+
+	embed_type = /datum/embedding/c35sol_ap
+
+	embed_falloff_tile = -15
+
+/datum/embedding/c35sol_ap
+	embed_chance = 75
+	fall_chance = 3
+	jostle_chance = 4
+	ignore_throwspeed_threshold = TRUE
+	pain_stam_pct = 0.4
+	pain_mult = 5
+	jostle_pain_mult = 6
+	rip_time = 1 SECONDS
+
+/obj/item/ammo_box/c35sol/ap
+	name = "ammo box (.35 Sol Short ripper)"
+	desc = "A box of .35 Sol Short pistol rounds, holds twenty-four rounds. The purple stripe indicates this should hold hollowpoint-like ammunition."
+
+	icon_state = "35box_shrapnel"
+
+	ammo_type = /obj/item/ammo_casing/c35sol/ap
