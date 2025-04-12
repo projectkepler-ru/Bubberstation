@@ -26,6 +26,8 @@
 
 /obj/item/ammo_casing/shotgun/scatterlaser
 	custom_materials = AMMO_MATS_SHOTGUN_TIDE
+	pellets = 7 //52.5 instead of 45
+	variance = 12
 
 /obj/item/ammo_casing/shotgun/techshell
 	can_be_printed = FALSE // techshell... casing! so not really usable on its own but if you're gonna make these go raid a seclathe.
@@ -70,18 +72,23 @@
 	<i>HORNET'S NEST: Fire an overwhelming amount of projectiles in a single shot.</i>"
 	can_be_printed = FALSE
 
+/obj/projectile/bullet/shotgun_slug
+	name = "12g shotgun slug"
+	icon_state = "pellet"
+	damage = 33 //25 to 33. We want to maintain damages
+	wound_bonus = 5 //0 - 5
+	bare_wound_bonus = 20 // 15 - 20
+
 /obj/item/ammo_casing/shotgun/buckshot
 	name = "buckshot shell"
 	desc = "A 12 gauge buckshot shell."
 	icon_state = "gshell"
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_buckshot
-	pellets = 8 // 8 * 6 for 48 damage if every pellet hits, we want to keep lethal shells ~50 damage
-	variance = 25
+	pellets = 8 // 8 * 5 for 40 damage if every pellet hits, base tg civilian buckshot is 30, which is a tad low
 
 /obj/projectile/bullet/pellet/shotgun_buckshot
 	name = "buckshot pellet"
-	damage = 6
-	weak_against_armour = TRUE
+	damage = 5
 
 /obj/item/ammo_casing/shotgun/rubbershot
 	name = "rubber shot"
@@ -102,15 +109,14 @@
 		especially against the likes of vox."
 	icon_state = "magshell"
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_buckshot/magnum
-	pellets = 4 // Half as many pellets for twice the damage each pellet, same overall damage as buckshot
-	variance = 20
+	pellets = 5 // Half as many pellets for twice the damage each pellet, same overall damage as buckshot
+	variance = 15
 	advanced_print_req = TRUE
 
 /obj/projectile/bullet/pellet/shotgun_buckshot/magnum
 	name = "magnum blockshot pellet"
 	damage = 15
-	wound_bonus = 10
-	weak_against_armour = FALSE
+	wound_bonus = 15
 
 /obj/projectile/bullet/pellet/shotgun_buckshot/magnum/Initialize(mapload)
 	. = ..()
@@ -127,39 +133,12 @@
 
 /obj/projectile/bullet/pellet/shotgun_buckshot/express
 	name = "express buckshot pellet"
-	damage = 5.5
+	damage = 6
 	wound_bonus = 10
-	weak_against_armour = FALSE
 
 /obj/projectile/bullet/pellet/shotgun_buckshot/express/Initialize(mapload)
 	. = ..()
 	transform = transform.Scale(0.75, 0.75)
-
-/obj/item/ammo_casing/shotgun/flechette
-	name = "flechette shell"
-	desc = "A 12 gauge flechette shell that specializes in ripping armored targets apart. These are exceptionally strong against armored targets."
-	icon_state = "fshell"
-	projectile_type = /obj/projectile/bullet/pellet/shotgun_buckshot/flechette
-	pellets = 5
-	variance = 15
-	custom_materials = AMMO_MATS_SHOTGUN_FLECH
-	advanced_print_req = TRUE
-
-/obj/projectile/bullet/pellet/shotgun_buckshot/flechette
-	name = "flechette"
-	icon = 'modular_skyrat/modules/shotgunrebalance/icons/projectiles.dmi'
-	icon_state = "flechette"
-	damage = 7
-	armour_penetration = 40
-	wound_bonus = 0
-	bare_wound_bonus = 0
-	sharpness = SHARP_EDGED //Did you knew flechettes fly sideways into people
-	damage_falloff_tile = -0.7 // Five tiles will halve the effectiveness dramatically
-	wound_falloff_tile = -3
-
-/obj/projectile/bullet/pellet/shotgun_buckshot/flechette/Initialize(mapload)
-	. = ..()
-	SpinAnimation()
 
 /obj/item/ammo_casing/shotgun/beehive
 	name = "hornet shell"
@@ -168,7 +147,7 @@
 	icon_state = "cnrshell"
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_buckshot/beehive
 	pellets = 4
-	variance = 15
+	variance = 5
 	fire_sound = 'sound/items/weapons/taser.ogg'
 	harmful = FALSE
 	custom_materials = AMMO_MATS_SHOTGUN_HIVE
@@ -180,7 +159,6 @@
 	icon_state = "hornet"
 	damage = 4
 	stamina = 15
-	damage_falloff_tile = -1
 	stamina_falloff_tile = -1
 	wound_bonus = 5
 	bare_wound_bonus = 5
@@ -188,12 +166,12 @@
 	sharpness = NONE
 	ricochets_max = 5
 	ricochet_chance = 200
-	ricochet_auto_aim_angle = 60
+	ricochet_auto_aim_angle = 180
 	ricochet_auto_aim_range = 8
 	ricochet_decay_damage = 1
 	ricochet_decay_chance = 1
 	ricochet_incidence_leeway = 0 //nanomachines son
-	homing_turn_speed = 25
+	homing_turn_speed = 50
 	homing_inaccuracy_min = 10
 	homing_inaccuracy_max = 80
 
@@ -215,10 +193,10 @@
 	icon_state = "stardust"
 	damage = 15
 	stamina = 33
-	damage_falloff_tile = -0.2
-	stamina_falloff_tile = -0.3
-	wound_bonus = 40
-	bare_wound_bonus = 40
+	damage_falloff_tile = -1
+	stamina_falloff_tile = -2
+	wound_bonus = 15
+	bare_wound_bonus = 15
 	stutter = 3 SECONDS
 	jitter = 5 SECONDS
 	eyeblur = 1 SECONDS
@@ -228,7 +206,7 @@
 	reflectable = NONE
 
 /datum/embedding/shotgun_buckshot/antitide
-	embed_chance = 200
+	embed_chance = 90
 	pain_chance = 95
 	fall_chance = 10
 	jostle_chance = 10
@@ -276,7 +254,7 @@
 
 /obj/projectile/bullet/shotgun_slug/hunter/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/bane, mob_biotypes = MOB_BEAST, damage_multiplier = 6)
+	AddElement(/datum/element/bane, mob_biotypes = MOB_BEAST, damage_multiplier = 7)
 
 /obj/item/ammo_casing/shotgun/honkshot
 	name = "confetti shell"
