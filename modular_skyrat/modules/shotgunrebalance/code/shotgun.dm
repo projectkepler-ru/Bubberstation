@@ -194,7 +194,7 @@
 	damage = 15
 	stamina = 33
 	damage_falloff_tile = -1
-	stamina_falloff_tile = -2
+	stamina_falloff_tile = -3
 	wound_bonus = 15
 	bare_wound_bonus = 15
 	stutter = 3 SECONDS
@@ -208,12 +208,12 @@
 /datum/embedding/shotgun_buckshot/antitide
 	embed_chance = 90
 	pain_chance = 95
-	fall_chance = 10
-	jostle_chance = 10
+	fall_chance = 30
+	jostle_chance = 33
 	ignore_throwspeed_threshold = TRUE
 	pain_stam_pct = 1
 	pain_mult = 3
-	rip_time = 1 SECONDS
+	rip_time = 5 SECONDS
 
 /obj/projectile/bullet/pellet/shotgun_buckshot/antitide/on_range()
 	do_sparks(1, TRUE, src)
@@ -231,6 +231,7 @@
 	wound_bonus = 30
 	bare_wound_bonus = 30
 	demolition_mod = 2
+	armour_penetration = 30 //Shitty AP in desperate case
 
 /obj/projectile/bullet/frangible_slug/on_hit(atom/target, blocked = 0, pierce_hit)
 	. = ..()
@@ -254,7 +255,8 @@
 
 /obj/projectile/bullet/shotgun_slug/hunter/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/bane, mob_biotypes = MOB_BEAST, damage_multiplier = 7)
+	AddElement(/datum/element/bane, mob_biotypes = MOB_BEAST, damage_multiplier = 7) //140 damages, for every other fauna that isnt mining, mainly carps and xenobio spawn.
+	AddElement(/datum/element/bane, mob_biotypes = MOB_MINING, damage_multiplier = 4) //80 damages, equal to a max upgrade PKA
 
 /obj/item/ammo_casing/shotgun/honkshot
 	name = "confetti shell"
