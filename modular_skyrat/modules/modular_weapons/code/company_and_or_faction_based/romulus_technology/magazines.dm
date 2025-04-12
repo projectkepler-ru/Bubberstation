@@ -50,6 +50,6 @@
 
 /obj/item/ammo_box/magazine/caflechette/magnesium
 	name = "magnesium rod magazine"
-	desc = "A magazine for the cmg weapon system, contains magnesium potassium and iron composite to ignite on contact with target."
+	desc = "A magazine for the cmg weapon system, contains magnesium potassium and iron composite to ignite on contact with target. Embedded rod continues to burn up until removed"
 	ammo_type = /obj/item/ammo_casing/caflechette/magnesium
 	icon_state = "cmg_incend"

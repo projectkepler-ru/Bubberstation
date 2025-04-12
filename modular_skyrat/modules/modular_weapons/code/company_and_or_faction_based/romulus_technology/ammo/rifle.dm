@@ -27,14 +27,14 @@
 	dismemberment = 0 // THIS MUST NOT DISMEMBER
 
 /datum/embedding/caflechette
-	embed_chance = 55
+	embed_chance = 60
 	pain_chance = 70
 	fall_chance = 50
 	jostle_chance = 80
 	ignore_throwspeed_threshold = TRUE
 	pain_stam_pct = 0.1
 	pain_mult = 5
-	rip_time = 1 SECONDS
+	rip_time = 5 SECONDS
 
 /obj/item/ammo_casing/caflechette/ripper
 	name = "flechette silicon ripper (Wounding)"
@@ -52,12 +52,12 @@
 
 /datum/embedding/ripper
 	embed_chance = 200
-	pain_chance = 70
-	fall_chance = 1
+	pain_chance = 10
+	fall_chance = 20
 	jostle_chance = 80
 	ignore_throwspeed_threshold = TRUE
 	pain_stam_pct = 0.9
-	pain_mult = 2
+	pain_mult = 1
 	rip_time = 5 SECONDS
 
 /obj/item/ammo_casing/caflechette/ballpoint
@@ -68,7 +68,7 @@
 
 /obj/projectile/bullet/caflechette/ballpoint
 	name = "high velocity steel ball"
-	damage = 13
+	damage = 12
 	wound_bonus = 20
 	bare_wound_bonus = 20
 	sharpness = SHARP_EDGED
@@ -80,16 +80,18 @@
 	ricochets_max = 3
 	ricochet_auto_aim_angle = 90
 	ricochet_auto_aim_range = 5
+	eyeblur = 2 SECONDS
 
 /datum/embedding/ballpoint
 	embed_chance = 80
-	fall_chance = 5
-	jostle_chance = 5
+	fall_chance = 15
+	jostle_chance = 50
 	ignore_throwspeed_threshold = TRUE
 	pain_stam_pct = 1
 	pain_mult = 2
 	jostle_pain_mult = 3
-	rip_time = 2 SECONDS
+	rip_time = 5 SECONDS
+	pain_chance = 30
 
 /obj/item/ammo_casing/caflechette/magnesium
 	name = "magnesium rod"
@@ -98,25 +100,26 @@
 
 /obj/projectile/bullet/caflechette/magnesium
 	name = "high velocity magnesium rod"
-	damage = 5
+	damage = 8
 	wound_bonus = 15
-	bare_wound_bonus = 10
+	bare_wound_bonus = 15
 	embed_type = /datum/embedding/magnesium
 	armour_penetration = 200 //does really low damage
+	damage_type = BURN
 
 /datum/embedding/magnesium
-	embed_chance = 60
+	embed_chance = 65
 	pain_chance = 10
 	fall_chance = 25
 	jostle_chance = 90
 	ignore_throwspeed_threshold = TRUE
-	pain_stam_pct = 0.9
+	pain_stam_pct = 0.5
 	pain_mult = 2
-	rip_time = 10 SECONDS
+	rip_time = 5 SECONDS
 
 /obj/projectile/bullet/caflechette/magnesium/on_hit(atom/target, blocked = 0, pierce_hit)
 	. = ..()
 	if(iscarbon(target))
 		var/mob/living/carbon/M = target
-		M.adjust_fire_stacks(4)
+		M.adjust_fire_stacks(3)
 		M.ignite_mob()

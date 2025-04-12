@@ -20,7 +20,7 @@
 	icon = 'modular_skyrat/modules/modular_weapons/icons/obj/company_and_or_faction_based/nanotrasen_system_inc/pistol.dmi'
 	icon_state = "black"
 	w_class = WEIGHT_CLASS_NORMAL
-	spread = 8
+	spread = 7
 	fire_sound = 'sound/items/weapons/gun/pistol/shot_alt.ogg'
 	rack_sound = 'sound/items/weapons/gun/pistol/rack.ogg'
 	lock_back_sound = 'sound/items/weapons/gun/pistol/slide_lock.ogg'
@@ -56,7 +56,6 @@
 	icon = 'modular_skyrat/modules/modular_weapons/icons/obj/company_and_or_faction_based/nanotrasen_system_inc/pistol.dmi'
 	icon_state = "silver"
 	spread = 13
-	pin = /obj/item/firing_pin
 	fire_delay = 2
 	burst_size = 3
 	spawn_magazine_type = /obj/item/ammo_box/magazine/m9mm/stendo
