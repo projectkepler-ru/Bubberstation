@@ -95,13 +95,13 @@
 	desc = "A shotgun casing filled with densely-packed rubber balls, used to incapacitate crowds from a distance."
 	icon_state = "rshell"
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_rubbershot
-	pellets = 6 // 6 * 10 for 60 stamina damage, + some small amount of brute, we want to keep less lethal shells ~60
+	pellets = 6 // 6 * 11 for 66 stamina damage, + some small amount of brute, we want to keep less lethal shells ~60
 	variance = 20
 	harmful = FALSE
 
 /obj/projectile/bullet/pellet/shotgun_rubbershot
 	weak_against_armour = TRUE
-	stamina = 10
+	stamina = 11
 
 /obj/item/ammo_casing/shotgun/magnum
 	name = "magnum blockshot shell"
@@ -174,10 +174,11 @@
 	homing_turn_speed = 50
 	homing_inaccuracy_min = 10
 	homing_inaccuracy_max = 80
+	reflectable = NONE
 
 /obj/item/ammo_casing/shotgun/antitide
 	name = "stardust shell"
-	desc = "A highly experimental shell filled with nanite electrodes that will embed themselves in soft targets. The electrodes are charged from kinetic movement which means moving targets will get punished more. it also cannot be reflected by martial art"
+	desc = "A highly experimental shell filled with nanite electrodes that will embed themselves in soft targets. The electrodes are charged from kinetic movement which means moving targets will get punished more."
 	icon_state = "lasershell"
 	projectile_type = /obj/projectile/bullet/pellet/shotgun_buckshot/antitide
 	pellets = 1
@@ -209,7 +210,7 @@
 	embed_chance = 90
 	pain_chance = 95
 	fall_chance = 30
-	jostle_chance = 33
+	jostle_chance = 53
 	ignore_throwspeed_threshold = TRUE
 	pain_stam_pct = 1
 	pain_mult = 3
@@ -313,6 +314,7 @@
 
 /obj/item/ammo_casing/shotgun/beanbag
 	harmful = FALSE
+	eyeblur = 2 SECONDS
 
 /obj/projectile/bullet/scattershot
 	damage = 25 //24 - 25, 84 - 100 damages total, this buff also affect nukie mech, which had scattershot
