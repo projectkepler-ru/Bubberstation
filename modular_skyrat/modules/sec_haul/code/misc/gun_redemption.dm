@@ -6,7 +6,7 @@
 	company_source = "Sol Security Solution"
 	company_message = span_bold("Supply Pod incoming please stand by")
 
-/obj/item/choice_beacon/blueshield/generate_display_names()
+/obj/item/choice_beacon/old_blueshield/generate_display_names()
 	var/static/list/selectable_gun_types = list(
 		"Energy Revolver" = /obj/item/gun/energy/e_gun/blueshield,
 		"Energy Carbine" = /obj/item/gun/energy/e_gun/stun/blueshield,
@@ -33,7 +33,7 @@
 
 	return selectable_gun_types
 
-//Station Central Command Staff
+//Station Central Command Staff, Aka BS and CCR, use as needed!
 
 /obj/item/choice_beacon/station_magistrate
 	name = "nanotrasen dignitaries weapon beacon"
@@ -50,29 +50,39 @@
 
 	return selectable_gun_types
 
-/obj/item/choice_beacon/station_magistrate/open_options_menu(mob/living/user)
-	var/list/armament_names_to_images = list()
-	var/list/armament_names_to_typepaths = list()
-	for(var/obj/item/storage/box/holy/holy_box as anything in typesof(/obj/item/storage/box/holy))
-		var/box_name = initial(holy_box.name)
-		var/obj/item/preview_item = initial(holy_box.typepath_for_preview)
-		armament_names_to_typepaths[box_name] = holy_box
-		armament_names_to_images[box_name] = image(icon = initial(preview_item.icon), icon_state = initial(preview_item.icon_state))
+/obj/item/choice_beacon/blueshield
+	name = "nanotrasen dignitaries weapon beacon"
+	desc = "A single use beacon to deliver a weapon of your choice. Please only call this in your office"
+	company_source = "Romulus Armoury"
+	company_message = span_bold("Supply Pod incoming please stand by")
 
-	var/chosen_name = show_radial_menu(
-		user = user,
-		anchor = src,
-		choices = armament_names_to_images,
-		custom_check = CALLBACK(src, PROC_REF(can_use_beacon), user),
-		require_near = TRUE,
+/obj/item/choice_beacon/blueshield/generate_display_names()
+    var/list/options = list(
+		"Energy Revolver" = /obj/item/gun/energy/e_gun/blueshield,
+		".457 Romulus Revolver" = /obj/item/storage/toolbox/guncase/skyrat/hos_revolver,
+		".460 Rowland Magnum Pistol" = /obj/item/storage/toolbox/guncase/skyrat/pistol/m45a5
 	)
-	if(!can_use_beacon(user))
-		return
-	var/chosen_type = armament_names_to_typepaths[chosen_name]
-	if(!ispath(chosen_type, /obj/item/storage/box/holy))
-		return
+    var/list/radial_display = list(
+		"Energy Revolver" = /obj/item/gun/energy/e_gun/blueshield,
+		".457 Romulus Revolver" = /obj/item/storage/toolbox/guncase/skyrat/hos_revolver,
+		".460 Rowland Magnum Pistol" = /obj/item/storage/toolbox/guncase/skyrat/pistol/m45a5
+	)
+            continue
+        options[all_clans::name] = all_clans
 
-	consume_use(chosen_type, user)
+        var/datum/radial_menu_choice/option = new
+        option.image = image(icon = all_clans::join_icon, icon_state = all_clans::join_icon_state)
+        option.info = "[all_clans::name] - [span_boldnotice(all_clans::join_description)]"
+        radial_display[all_clans::name] = option
+
+    var/selectable_gun_types = show_radial_menu(person_selecting, owner.current, radial_display)
+    selectable_gun_types = options[selectable_gun_types]
+    if(QDELETED(src) || QDELETED(owner.current))
+        return FALSE
+    if(!chosen_clan)
+        to_chat(person_selecting, span_announce("You choose to remain ignorant, for now."))
+        return
+    my_clan = new chosen_clan(src)
 
 //Security Sidearm
 
