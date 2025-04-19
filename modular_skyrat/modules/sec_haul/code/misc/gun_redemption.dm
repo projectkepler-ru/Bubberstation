@@ -50,39 +50,44 @@
 
 	return selectable_gun_types
 
-/obj/item/choice_beacon/blueshield
-	name = "nanotrasen dignitaries weapon beacon"
+/obj/item/advanced_choice_beacon/blueshield
+	name = "blushield equipment beacon"
 	desc = "A single use beacon to deliver a weapon of your choice. Please only call this in your office"
 	company_source = "Romulus Armoury"
 	company_message = span_bold("Supply Pod incoming please stand by")
+	possible_choices = list(/obj/structure/closet/crate/secure/weapon/blueshied/paradise, /obj/structure/closet/crate/secure/weapon/blueshied/romtech, /obj/structure/closet/crate/secure/weapon/blueshied/aegis, /obj/structure/closet/crate/secure/weapon/blueshied/hero)
 
-/obj/item/choice_beacon/blueshield/generate_display_names()
-    var/list/options = list(
-		"Energy Revolver" = /obj/item/gun/energy/e_gun/blueshield,
-		".457 Romulus Revolver" = /obj/item/storage/toolbox/guncase/skyrat/hos_revolver,
-		".460 Rowland Magnum Pistol" = /obj/item/storage/toolbox/guncase/skyrat/pistol/m45a5
-	)
-    var/list/radial_display = list(
-		"Energy Revolver" = /obj/item/gun/energy/e_gun/blueshield,
-		".457 Romulus Revolver" = /obj/item/storage/toolbox/guncase/skyrat/hos_revolver,
-		".460 Rowland Magnum Pistol" = /obj/item/storage/toolbox/guncase/skyrat/pistol/m45a5
-	)
-            continue
-        options[all_clans::name] = all_clans
 
-        var/datum/radial_menu_choice/option = new
-        option.image = image(icon = all_clans::join_icon, icon_state = all_clans::join_icon_state)
-        option.info = "[all_clans::name] - [span_boldnotice(all_clans::join_description)]"
-        radial_display[all_clans::name] = option
+/obj/item/advanced_choice_beacon/blueshield/get_available_options()
+	var/list/options = list()
+	for(var/iterating_choice in possible_choices)
+		var/obj/structure/closet/crate/secure/weapon/blueshied/praetorian_choice = iterating_choice
+		var/datum/radial_menu_choice/option = new
+		option.image = image(icon = initial(praetorian_choice.icon), icon_state = initial(praetorian_choice.icon_state))
+		option.info = span_boldnotice("[initial(praetorian_choice.loadout_desc)]")
 
-    var/selectable_gun_types = show_radial_menu(person_selecting, owner.current, radial_display)
-    selectable_gun_types = options[selectable_gun_types]
-    if(QDELETED(src) || QDELETED(owner.current))
-        return FALSE
-    if(!chosen_clan)
-        to_chat(person_selecting, span_announce("You choose to remain ignorant, for now."))
-        return
-    my_clan = new chosen_clan(src)
+		options[praetorian_choice] = option
+
+	sort_list(options)
+
+	return options
+
+
+/obj/structure/closet/crate/secure/weapon/blueshied/paradise
+	name = "Cyberiad Blueshield"
+	loadout_desc = "An assortment of classic blueshied equipment. \
+		Features barricades, building materials, extra large fuel tank and 5.6mm defensive autoturrets."
+
+/obj/structure/closet/crate/secure/weapon/blueshied/paradise/PopulateContents()
+	new /obj/item/gun/energy/e_gun/blueshield(src)
+
+/obj/structure/closet/crate/secure/weapon/blueshied/romtech
+	name = "Romulus Executive Protection Detail"
+	loadout_desc = "An assortment of classic blueshied equipment. \
+		Features barricades, building materials, extra large fuel tank and 5.6mm defensive autoturrets."
+
+/obj/structure/closet/crate/secure/weapon/blueshied/romtech/PopulateContents()
+	new /obj/item/storage/toolbox/guncase/skyrat/pistol/blueshield_cmg(src)
 
 //Security Sidearm
 
