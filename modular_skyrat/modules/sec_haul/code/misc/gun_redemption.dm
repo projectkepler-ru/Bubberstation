@@ -53,8 +53,6 @@
 /obj/item/advanced_choice_beacon/blueshield
 	name = "blushield equipment beacon"
 	desc = "A single use beacon to deliver a weapon of your choice. Please only call this in your office"
-	company_source = "Romulus Armoury"
-	company_message = span_bold("Supply Pod incoming please stand by")
 	possible_choices = list(/obj/structure/closet/crate/secure/weapon/blueshied/paradise, /obj/structure/closet/crate/secure/weapon/blueshied/romtech, /obj/structure/closet/crate/secure/weapon/blueshied/aegis, /obj/structure/closet/crate/secure/weapon/blueshied/hero)
 
 
@@ -72,19 +70,20 @@
 
 	return options
 
-
+/obj/structure/closet/crate/secure/weapon/blueshied
+	var/loadout_desc
 /obj/structure/closet/crate/secure/weapon/blueshied/paradise
 	name = "Cyberiad Blueshield"
 	loadout_desc = "An assortment of classic blueshied equipment. \
-		Features barricades, building materials, extra large fuel tank and 5.6mm defensive autoturrets."
+		Contains X-02 Energy Revolver, self recharging. A box of tracking implants, and a silver tipped telescopic baton"
 
 /obj/structure/closet/crate/secure/weapon/blueshied/paradise/PopulateContents()
 	new /obj/item/gun/energy/e_gun/blueshield(src)
 
 /obj/structure/closet/crate/secure/weapon/blueshied/romtech
 	name = "Romulus Executive Protection Detail"
-	loadout_desc = "An assortment of classic blueshied equipment. \
-		Features barricades, building materials, extra large fuel tank and 5.6mm defensive autoturrets."
+	loadout_desc = "Standard Romulus and Terran secret service equipment. \
+		Contains CMG-2 Commando, 2 .117 Magazines, a colt police revolver with 2 speedloaders, an ammo pouch, a telescopicshield and a webbing."
 
 /obj/structure/closet/crate/secure/weapon/blueshied/romtech/PopulateContents()
 	new /obj/item/storage/toolbox/guncase/skyrat/pistol/blueshield_cmg(src)
