@@ -1,12 +1,12 @@
 //Handgun
 
 
-/obj/item/storage/toolbox/guncase/skyrat/pistol/trappiste_small_case/nt_glock
+/obj/item/storage/toolbox/guncase/skyrat/pistol/trappiste_small_case/ladon
 	name = "9x25mm Mk12 Standard Pistol"
 
-	weapon_to_spawn = /obj/item/gun/ballistic/automatic/pistol/nt_glock/empty
+	weapon_to_spawn = /obj/item/gun/ballistic/automatic/pistol/ladon/empty
 
-/obj/item/storage/toolbox/guncase/skyrat/pistol/trappiste_small_case/nt_glock/PopulateContents()
+/obj/item/storage/toolbox/guncase/skyrat/pistol/trappiste_small_case/ladon/PopulateContents()
 	new weapon_to_spawn (src)
 
 	generate_items_inside(list(
@@ -14,7 +14,7 @@
 		/obj/item/ammo_box/magazine/m9mm/rubber = 3,
 	), src)
 
-/obj/item/gun/ballistic/automatic/pistol/nt_glock
+/obj/item/gun/ballistic/automatic/pistol/ladon
 	name = "\improper GP-9"
 	desc = "General Purpose Pistol Number 9. A classic 9x25mm handgun with a small magazine capacity."
 	icon = 'modular_skyrat/modules/modular_weapons/icons/obj/company_and_or_faction_based/nanotrasen_system_inc/pistol.dmi'
@@ -30,19 +30,19 @@
 	suppressor_x_offset = -2
 	suppressor_y_offset = -1
 
-/obj/item/gun/ballistic/automatic/pistol/nt_glock/give_manufacturer_examine()
-	AddElement(/datum/element/manufacturer_examine, COMPANY_NANOTRASEN)
+/obj/item/gun/ballistic/automatic/pistol/ladon/give_manufacturer_examine()
+	AddElement(/datum/element/manufacturer_examine, COMPANY_ROMULUS)
 
-/obj/item/gun/ballistic/automatic/pistol/nt_glock/empty
+/obj/item/gun/ballistic/automatic/pistol/ladon/empty
 	spawnwithmagazine = FALSE
 
 
-/obj/item/storage/toolbox/guncase/skyrat/nt_glock_spec
-	name = "9x25mm Mk2 Special Operation Pistol"
+/obj/item/storage/toolbox/guncase/skyrat/ladon_spec
+	name = "9x25mm Mk12 Special Operation Pistol"
 
-	weapon_to_spawn = /obj/item/gun/ballistic/automatic/pistol/nt_glock/spec/empty
+	weapon_to_spawn = /obj/item/gun/ballistic/automatic/pistol/ladon/spec/empty
 
-/obj/item/storage/toolbox/guncase/skyrat/pistol/trappiste_small_case/nt_glock_spec/PopulateContents()
+/obj/item/storage/toolbox/guncase/skyrat/pistol/trappiste_small_case/ladon_spec/PopulateContents()
 	new weapon_to_spawn (src)
 
 	generate_items_inside(list(
@@ -50,7 +50,7 @@
 		/obj/item/ammo_box/magazine/m9mm/stendo/ap = 3,
 	), src)
 
-/obj/item/gun/ballistic/automatic/pistol/nt_glock/spec
+/obj/item/gun/ballistic/automatic/pistol/ladon/spec
 	name = "\improper GP-93R"
 	desc = "General Purpose Pistol Number 9, 3-Round Burst. A special operation variant with a high capacity magazine."
 	icon = 'modular_skyrat/modules/modular_weapons/icons/obj/company_and_or_faction_based/nanotrasen_system_inc/pistol.dmi'
@@ -60,7 +60,7 @@
 	burst_size = 3
 	spawn_magazine_type = /obj/item/ammo_box/magazine/m9mm/stendo
 
-/obj/item/gun/ballistic/automatic/pistol/nt_glock/spec/empty
+/obj/item/gun/ballistic/automatic/pistol/ladon/spec/empty
 	spawnwithmagazine = FALSE
 
 //Magistrate Pistol
