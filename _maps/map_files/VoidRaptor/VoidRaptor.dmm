@@ -47000,8 +47000,8 @@
 /obj/item/mecha_ammo/missiles_pep,
 /obj/item/ammo_box/advanced/s12gauge,
 /obj/item/ammo_box/advanced/s12gauge/buckshot,
-/obj/item/ammo_box/advanced/s12gauge/flechette,
-/obj/item/ammo_box/advanced/s12gauge/flechette,
+/obj/item/ammo_box/advanced/s12gauge,
+/obj/item/ammo_box/advanced/s12gauge,
 /turf/open/floor/engine,
 /area/station/ai_monitored/security/armory)
 "njl" = (

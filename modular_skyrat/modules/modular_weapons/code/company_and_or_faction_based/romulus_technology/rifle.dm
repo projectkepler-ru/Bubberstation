@@ -20,14 +20,13 @@
 
 	w_class = WEIGHT_CLASS_BULKY
 	weapon_weight = WEAPON_HEAVY
-	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_SUITSTORE | ITEM_SLOT_BELT //Beltt BECAUSE its compact
+	slot_flags = ITEM_SLOT_BACK | ITEM_SLOT_SUITSTORE | ITEM_SLOT_BELT //Belt BECAUSE its compact
 
-	burst_size = 1
+	burst_size = 3
 	fire_delay = 2
 
 	spread = 7
-	projectile_wound_bonus = -20
-	projectile_damage_multiplier = 0.75
+	projectile_wound_bonus = -35
 
 	accepted_magazine_type = /obj/item/ammo_box/magazine/c40sol_rifle
 	spawn_magazine_type = /obj/item/ammo_box/magazine/c40sol_rifle/standard
@@ -35,13 +34,6 @@
 	actions_types = list()
 
 	projectile_damage_multiplier = 0.75 //26.5 , 18.75 && 11.5 Bear in mind it IS full auto
-
-/obj/item/gun/ballistic/automatic/rom_carbine/Initialize(mapload)
-	. = ..()
-	give_autofire()
-
-/obj/item/gun/ballistic/automatic/rom_carbine/proc/give_autofire()
-	AddComponent(/datum/component/automatic_fire, fire_delay)
 
 /obj/item/gun/ballistic/automatic/rom_carbine/give_manufacturer_examine()
 	AddElement(/datum/element/manufacturer_examine, COMPANY_ROMTECH)

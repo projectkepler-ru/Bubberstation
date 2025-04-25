@@ -27,7 +27,7 @@
 	dismemberment = 0 // THIS MUST NOT DISMEMBER
 
 /datum/embedding/caflechette
-	embed_chance = 60
+	embed_chance = 30
 	pain_chance = 70
 	fall_chance = 50
 	jostle_chance = 80
@@ -69,8 +69,8 @@
 /obj/projectile/bullet/caflechette/ballpoint
 	name = "high velocity steel ball"
 	damage = 12
-	wound_bonus = 20
-	bare_wound_bonus = 20
+	wound_bonus = 5
+	bare_wound_bonus = 25
 	sharpness = SHARP_EDGED
 	armour_penetration = 20
 	shrapnel_type = /obj/item/shrapnel/stingball
@@ -85,7 +85,7 @@
 /datum/embedding/ballpoint
 	embed_chance = 80
 	fall_chance = 15
-	jostle_chance = 50
+	jostle_chance = 15
 	ignore_throwspeed_threshold = TRUE
 	pain_stam_pct = 1
 	pain_mult = 2

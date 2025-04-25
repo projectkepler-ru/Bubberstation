@@ -31,7 +31,7 @@
 	suppressor_y_offset = -1
 
 /obj/item/gun/ballistic/automatic/pistol/ladon/give_manufacturer_examine()
-	AddElement(/datum/element/manufacturer_examine, COMPANY_ROMULUS)
+	AddElement(/datum/element/manufacturer_examine, COMPANY_ROMTECH)
 
 /obj/item/gun/ballistic/automatic/pistol/ladon/empty
 	spawnwithmagazine = FALSE
