@@ -68,7 +68,7 @@
 
 /datum/crafting_recipe/cck_to_glocknineteen
 	name = "General Pistol Number 9 Conversion Kit"
-	result = /obj/item/gun/ballistic/automatic/pistol/nt_glock/empty
+	result = /obj/item/gun/ballistic/automatic/pistol/ladon/empty
 	reqs = list(
 		/obj/item/gun/ballistic/automatic/pistol/sec_glock/security = 1,
 		/obj/item/weaponcrafting/gunkit/cck_to_glocknineteen = 1,
@@ -81,7 +81,7 @@
 	category = CAT_WEAPON_RANGED
 
 /datum/crafting_recipe/cck_to_glocknineteen/check_requirements(mob/user, list/collected_requirements)
-	var/obj/item/gun/ballistic/automatic/pistol/sec_glock/security/the_piece = collected_requirements[/obj/item/gun/ballistic/automatic/pistol/nt_glock/empty][1]
+	var/obj/item/gun/ballistic/automatic/pistol/sec_glock/security/the_piece = collected_requirements[/obj/item/gun/ballistic/automatic/pistol/ladon/empty][1]
 	if(!the_piece.bolt_locked)
 		return FALSE
 	if(the_piece.magazine)
@@ -90,7 +90,7 @@
 
 /datum/crafting_recipe/cck_to_glockeightteen
 	name = "General Pistol Number 8 Conversion Kit"
-	result = /obj/item/gun/ballistic/automatic/pistol/nt_glock/spec/empty
+	result = /obj/item/gun/ballistic/automatic/pistol/ladon/spec/empty
 	reqs = list(
 		/obj/item/gun/ballistic/automatic/pistol/sec_glock = 1,
 		/obj/item/weaponcrafting/gunkit/cck_to_glockeightteen = 1,
@@ -103,7 +103,7 @@
 	category = CAT_WEAPON_RANGED
 
 /datum/crafting_recipe/cck_to_glocknineteen/check_requirements(mob/user, list/collected_requirements)
-	var/obj/item/gun/ballistic/automatic/pistol/sec_glock/security/the_piece = collected_requirements[/obj/item/gun/ballistic/automatic/pistol/nt_glock/spec/empty][1]
+	var/obj/item/gun/ballistic/automatic/pistol/sec_glock/security/the_piece = collected_requirements[/obj/item/gun/ballistic/automatic/pistol/ladon/spec/empty][1]
 	if(!the_piece.bolt_locked)
 		return FALSE
 	if(the_piece.magazine)

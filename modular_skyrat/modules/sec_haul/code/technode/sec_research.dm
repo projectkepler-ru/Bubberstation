@@ -130,7 +130,7 @@
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY | DEPARTMENT_BITFLAG_CARGO
-/*
+
 /datum/design/advancedgaugeboxes_flech
 	name = "12 Gauge Advanced Flechette Ammunition Box(Lethal)"
 	desc = "A 12 gauge ammunition box for shotgun shells."
@@ -142,7 +142,7 @@
 		RND_CATEGORY_WEAPONS + RND_SUBCATEGORY_WEAPONS_AMMO
 	)
 	departmental_flags = DEPARTMENT_BITFLAG_SECURITY
-*/
+
 /datum/design/advancedgaugeboxes_antitide
 	name = "12 Gauge Advanced Anti Riot Ammunition Box(Less-Lethal)"
 	desc = "A 12 gauge ammunition box for shotgun shells."

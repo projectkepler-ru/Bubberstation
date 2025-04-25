@@ -51,7 +51,6 @@
 	design_ids += "m45_mag"
 	design_ids += "s12g_rubber"
 	design_ids += "s12g_bslug"
-	design_ids += "c457_casing"
 	design_ids += "sol40_riflemag"
 	design_ids += "m9mm_mag_rubber"
 	design_ids += "c10mm_rl"
@@ -76,6 +75,7 @@
 	design_ids += "c10mm_rhp"
 	design_ids += "c10mm_rap"
 	design_ids += "s12g_slug"
+	design_ids += "s12g_flechette"
 	. = ..()
 
 /datum/techweb_node/syndicate_basic/New()
