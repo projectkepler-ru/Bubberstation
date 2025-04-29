@@ -315,6 +315,17 @@
 /obj/item/ammo_casing/shotgun/beanbag
 	harmful = FALSE
 
+/datum/embedding/bullet/flechette
+	embed_chance = 50 //50 instead of 100 or 25
+	fall_chance = 0
+	jostle_chance = 20
+	ignore_throwspeed_threshold = TRUE
+	pain_stam_pct = 0.1
+	pain_mult = 0.5
+	jostle_pain_mult = 1.5
+	rip_time = 1 SECONDS
+
+//Mech, it count as shotgun so
 /obj/projectile/bullet/scattershot
 	damage = 25 //24 - 25, 84 - 100 damages total, this buff also affect nukie mech, which had scattershot
 

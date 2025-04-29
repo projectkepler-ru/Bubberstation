@@ -9,6 +9,18 @@
 
 	custom_premium_price = 500
 
+/obj/item/ammo_box/advanced/s12gauge/milspec
+	name = "Military Slug ammo box"
+	desc = "A box of 7 slug shells. Large, singular shots that pack a punch."
+	icon_state = "slug"
+	ammo_type = /obj/item/ammo_casing/shotgun/milspec
+
+/obj/item/ammo_box/advanced/s12gauge/milspec_buckshot
+	name = "Military Buckshot ammo box"
+	desc = "A box of 7 buckshot shells. These have a modest spread of weaker projectiles."
+	icon_state = "buckshot"
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/milspec
+
 /obj/item/ammo_box/advanced/s12gauge/laser
 	name = "Scatterlaser ammo box"
 	desc = "A box of 7 laser shells. Fires highly lethal laser shell."
