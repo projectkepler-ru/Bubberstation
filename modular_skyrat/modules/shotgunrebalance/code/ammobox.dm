@@ -1,6 +1,6 @@
 /obj/item/ammo_box/advanced/s12gauge
-	name = "Slug ammo box"
-	desc = "A box of 7 slug shells. Large, singular shots that pack a punch."
+	name = "Civilian Slug ammo box"
+	desc = "A box of 7 slug shells. Large, singular shots that pack less of a punch but offers better accuracy at range."
 	icon = 'modular_skyrat/modules/shotgunrebalance/icons/shotbox.dmi'
 	icon_state = "slug"
 	ammo_type = /obj/item/ammo_casing/shotgun
@@ -12,13 +12,13 @@
 /obj/item/ammo_box/advanced/s12gauge/milspec
 	name = "Military Slug ammo box"
 	desc = "A box of 7 slug shells. Large, singular shots that pack a punch."
-	icon_state = "slug"
+	icon_state = "milslug"
 	ammo_type = /obj/item/ammo_casing/shotgun/milspec
 
 /obj/item/ammo_box/advanced/s12gauge/milspec_buckshot
 	name = "Military Buckshot ammo box"
 	desc = "A box of 7 buckshot shells. These have a modest spread of weaker projectiles."
-	icon_state = "buckshot"
+	icon_state = "magnum"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot/milspec
 
 /obj/item/ammo_box/advanced/s12gauge/laser
@@ -28,7 +28,7 @@
 	ammo_type = /obj/item/ammo_casing/shotgun/scatterlaser
 
 /obj/item/ammo_box/advanced/s12gauge/buckshot
-	name = "Buckshot ammo box"
+	name = "Civilian Buckshot ammo box"
 	desc = "A box of 7 buckshot shells. These have a modest spread of weaker projectiles."
 	icon_state = "buckshot"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
@@ -67,7 +67,7 @@
 	name = "Flechette ammo box"
 	desc = "A box of 7 flechette shells. Each shell contains a small group of tumbling blades that excel at armor penetration. And embedding!"
 	icon_state = "flechette"
-	ammo_type = obj/item/ammo_casing/shotgun/flechette
+	ammo_type = /obj/item/ammo_casing/shotgun/flechette
 
 /obj/item/ammo_box/advanced/s12gauge/dragonsbreath
 	name = "Dragon's breath ammo box"
