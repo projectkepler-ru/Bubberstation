@@ -153,9 +153,9 @@
 	/// how long does it take to extend/collapse the stock
 	var/toggle_time = 1 SECONDS
 	/// what's our spread with our extended stock (mild varedit compatibility I Guess)?
-	var/unfolded_spread = 4
+	var/unfolded_spread = 6
 	/// what's our spread with a folded stock (see above comment)?
-	var/folded_spread = 8
+	var/folded_spread = 12
 	/// Do we have any recoil if it's folded?
 	var/folded_recoil = 1
 	///Do we lose any recoil when it's not?
@@ -238,7 +238,7 @@
 	weapon_weight = WEAPON_LIGHT
 	burst_size = 3
 	spread = 2
-	unfolded_spread = 7
+	unfolded_spread = 4
 	folded_spread = 7
 	folded_recoil = 2
 	unfolded_recoil = 0
