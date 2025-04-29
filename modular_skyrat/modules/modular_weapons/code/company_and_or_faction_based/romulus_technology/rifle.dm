@@ -95,7 +95,7 @@
 	can_unsuppress = TRUE
 	special_mags = TRUE
 
-	projectile_damage_multiplier = 1.2 //This gun is slow as shit, cut it some slacks
+	projectile_damage_multiplier = 1.1 //This gun is slow as shit, cut it some slacks
 
 /obj/item/gun/ballistic/rifle/carwil/give_manufacturer_examine()
 	AddElement(/datum/element/manufacturer_examine, COMPANY_ROMTECH)
