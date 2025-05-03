@@ -18,7 +18,7 @@
 
 
 /obj/projectile/bullet/caflechette
-	name = "flechette penetrator"
+	name = "high velocity flechette steel rod"
 	damage = 15
 	armour_penetration = 50
 	wound_bonus = 1
@@ -43,8 +43,8 @@
 	custom_materials = AMMO_MATS_SHOTGUN_FLECH
 
 /obj/projectile/bullet/caflechette/ripper
-	name = "flechette dart"
-	damage = 10
+	name = "flechette spike"
+	damage = 8
 	wound_bonus = 10
 	bare_wound_bonus = 25
 	embed_type = /datum/embedding/ripper
