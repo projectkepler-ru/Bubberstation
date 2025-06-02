@@ -58,6 +58,8 @@
 
 	return .
 
+//Deprecated
+
 /obj/item/gun/ballistic/automatic/rom_carbine/no_mag
 	spawnwithmagazine = FALSE
 

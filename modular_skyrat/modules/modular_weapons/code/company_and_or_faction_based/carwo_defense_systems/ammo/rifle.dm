@@ -20,7 +20,7 @@
 
 /obj/projectile/bullet/c40sol
 	name = ".40 Sol Long bullet"
-	damage = 35
+	damage = 30
 
 	wound_bonus = -30
 	bare_wound_bonus = -35
@@ -171,10 +171,10 @@
 	name = ".40 Sol Long incendiary bullet"
 	icon_state = "redtrac"
 
-	damage = 25
+	damage = 15
 
 	/// How many firestacks the bullet should impart upon a target when impacting
-	var/firestacks_to_give = 1
+	var/firestacks_to_give = 2
 
 
 /obj/projectile/bullet/c40sol/incendiary/on_hit(atom/target, blocked = 0, pierce_hit)
