@@ -20,7 +20,7 @@
 /obj/projectile/bullet/caflechette
 	name = "high velocity flechette steel rod"
 	damage = 15
-	armour_penetration = 50
+	armour_penetration = 30
 	wound_bonus = 1
 	bare_wound_bonus = 1
 	embed_type = /datum/embedding/caflechette
@@ -48,7 +48,7 @@
 	wound_bonus = 10
 	bare_wound_bonus = 25
 	embed_type = /datum/embedding/ripper
-	armour_penetration = 20 //defeat basic armour
+	armour_penetration = 10
 
 /datum/embedding/ripper
 	embed_chance = 50
@@ -58,7 +58,7 @@
 	ignore_throwspeed_threshold = TRUE
 	pain_stam_pct = 0.9
 	pain_mult = 1
-	rip_time = 5 SECONDS
+	rip_time = 2 SECONDS
 
 /obj/item/ammo_casing/caflechette/ballpoint
 	name = "ballistic steel ball (Less Lethal)"
@@ -83,14 +83,14 @@
 	eyeblur = 2 SECONDS
 
 /datum/embedding/ballpoint
-	embed_chance = 40
+	embed_chance = 30
 	fall_chance = 30
 	jostle_chance = 10
 	ignore_throwspeed_threshold = TRUE
 	pain_stam_pct = 1
 	pain_mult = 2
 	jostle_pain_mult = 3
-	rip_time = 5 SECONDS
+	rip_time = 2 SECONDS
 	pain_chance = 25
 
 /obj/item/ammo_casing/caflechette/magnesium
@@ -104,13 +104,13 @@
 	wound_bonus = 15
 	bare_wound_bonus = 15
 	embed_type = /datum/embedding/magnesium
-	armour_penetration = 45
+	armour_penetration = 40
 	damage_type = BURN
 
 /datum/embedding/magnesium
 	embed_chance = 65
-	pain_chance = 25
-	fall_chance = 35
+	pain_chance = 15
+	fall_chance = 40
 	jostle_chance = 60
 	ignore_throwspeed_threshold = TRUE
 	pain_stam_pct = 0.5
