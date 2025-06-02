@@ -13,7 +13,7 @@
 	damage = 35
 	stamina = 15 //knock the winds outta ya
 
-	wound_bonus = -35
+	wound_bonus = -50
 	bare_wound_bonus = -60
 	stamina_falloff_tile = -0.3
 
@@ -31,7 +31,7 @@
 	damage = 25
 
 	wound_bonus = -50
-	bare_wound_bonus = -10
+	bare_wound_bonus = 0
 	armour_penetration = 40
 	damage_falloff_tile = 0
 	stamina_falloff_tile = 0
