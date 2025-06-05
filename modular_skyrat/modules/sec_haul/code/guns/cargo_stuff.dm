@@ -130,17 +130,6 @@
 	)
 	crate_name = "RomTech CMG-1 Crate"
 
-/datum/supply_pack/security/armory/rom_ceremonial_rifle
-	name = "Romulus Ceremonial Bolt Action Rifle Crate"
-	desc = "Contains Three Ceremonial Bolt Action Rifle in .40 , as well as ammo for it."
-	cost = CARGO_CRATE_VALUE * 24
-	contains = list(/obj/item/gun/ballistic/rifle/carwil = 3,
-		/obj/item/ammo_box/magazine/c40sol_rifle = 3,
-	)
-	crate_name = "Romulus Ceremonial Rifle Crate"
-
-
-
 //Misc
 
 /datum/supply_pack/security/armory/kiboko

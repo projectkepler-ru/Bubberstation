@@ -33,8 +33,6 @@
 
 	actions_types = list()
 
-	projectile_damage_multiplier = 0.75 //26.5 , 18.75 && 11.5 Bear in mind it IS full auto
-
 /obj/item/gun/ballistic/automatic/rom_carbine/give_manufacturer_examine()
 	AddElement(/datum/element/manufacturer_examine, COMPANY_ROMTECH)
 
@@ -66,7 +64,7 @@
 //Bolt Action Rifle
 /obj/item/gun/ballistic/rifle/carwil
 	name = "\improper RomTech Ceremonial Rifle"
-	desc = "A boltaction ceremonial rifle, chambered in Sol .40 Rifle While technically outdated in modern arms markets, it still used by recreational hunter \
+	desc = "A ceremonial rifle, chambered in Sol .40 Rifle While technically outdated in modern arms markets, it still used by recreational hunter \
 		as rifle of this kind are much more controllable. Famously used by the royal guard of Romulus Federation."
 	icon = 'modular_skyrat/modules/modular_weapons/icons/obj/company_and_or_faction_based/romulus_technology/gun48x32.dmi'
 	icon_state = "elite"
@@ -92,31 +90,17 @@
 	slot_flags = ITEM_SLOT_BACK
 	mag_display = TRUE
 	tac_reloads = TRUE
-	rack_delay = 1.5 SECONDS
 	can_suppress = TRUE
 	can_unsuppress = TRUE
 	special_mags = TRUE
-
-	projectile_damage_multiplier = 1.1 //This gun is slow as shit, cut it some slacks
+	need_bolt_lock_to_interact = TRUE
+	semi_auto = TRUE
 
 /obj/item/gun/ballistic/rifle/carwil/give_manufacturer_examine()
 	AddElement(/datum/element/manufacturer_examine, COMPANY_ROMTECH)
 
 /obj/item/gun/ballistic/rifle/carwil/empty
 	spawnwithmagazine = FALSE
-
-/obj/item/storage/toolbox/guncase/skyrat/ceremonial_rifle
-	name = "Sporting Rifle Case"
-	weapon_to_spawn = /obj/item/gun/ballistic/rifle/carwil/empty
-
-/obj/item/storage/toolbox/guncase/skyrat/ceremonial_rifle/PopulateContents()
-	new weapon_to_spawn (src)
-
-	generate_items_inside(list(
-		/obj/item/ammo_box/c40sol/fragmentation = 1,
-		/obj/item/ammo_box/c40sol = 1,
-		/obj/item/ammo_box/magazine/c40sol_rifle/starts_empty = 3,
-	), src)
 
 //Flechette Rifle
 //This Replace The Battle Rifle, handle with care please
