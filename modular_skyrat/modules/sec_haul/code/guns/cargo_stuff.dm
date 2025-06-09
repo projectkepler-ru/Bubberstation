@@ -9,16 +9,6 @@
 				)
 	crate_name = ".35 ammo crate"
 
-/datum/supply_pack/security/lethalsolrifles
-	name = ".40 Ammunition Crates"
-	desc = "Contains 6 boxes of lethal ammunition for Sol .40 Rifle."
-	cost = CARGO_CRATE_VALUE * 10
-	contains = list(/obj/item/ammo_box/c40sol= 4,
-					/obj/item/ammo_box/c40sol/pierce = 1,
-					/obj/item/ammo_box/c40sol/incendiary = 1,
-				)
-	crate_name = ".40 ammo crate"
-
 /datum/supply_pack/security/lethalskyratshotgun
 	name = "12 Gauge Ammunition Crates"
 	desc = "Contains 6 boxes of lethal ammunition for all 12 Gauge Shotguns."
@@ -94,15 +84,6 @@
 	)
 	crate_name = "Carwo 'Sindano' Submachinegun Crate"
 
-/datum/supply_pack/security/armory/marksman
-	name = "Carwil Marksman Rifle Crate"
-	desc = "Contains one Carwil Marksman Rifle, as well as 3 spare magazines for it."
-	cost = CARGO_CRATE_VALUE * 12
-	contains = list(/obj/item/gun/ballistic/automatic/sol_rifle/marksman = 1,
-	/obj/item/ammo_box/magazine/c40sol_rifle = 3,
-	)
-	crate_name = "Carwil Marksman Rifle Crate"
-
 //NT Guns and Ammo
 
 /datum/supply_pack/security/sidearmcrate
@@ -126,17 +107,6 @@
 	)
 	crate_name = "RomTech CMG-1 Crate"
 
-/datum/supply_pack/security/armory/rom_ceremonial_rifle
-	name = "Romulus Ceremonial Bolt Action Rifle Crate"
-	desc = "Contains Three Ceremonial Bolt Action Rifle in .40 , as well as ammo for it."
-	cost = CARGO_CRATE_VALUE * 12
-	contains = list(/obj/item/gun/ballistic/rifle/carwil = 3,
-		/obj/item/ammo_box/magazine/c40sol_rifle = 3,
-	)
-	crate_name = "Romulus Ceremonial Rifle Crate"
-
-
-
 //Misc
 
 /datum/supply_pack/security/armory/kiboko
@@ -157,24 +127,23 @@
 		/obj/item/ammo_box/c980grenade/riot = 3,
 	)
 
-/*
-/datum/supply_pack/imports/lmg
-	name = "Smuggled Sol Light Machinegun Crate"
-	desc = "(*!&@#GOOD NEWS, OPERATIVE! WE GOT YOU THE BIG LEAGUE AUTOMATIC WEAPONS. BY \
+
+/datum/supply_pack/imports/infanterie_alt
+	name = "Romulus Stealth Operative Crate"
+	desc = "(*!&@#GOOD NEWS, OPERATIVE! WE GOT SURPLUS EQUIPMENNT \
 		SMUGGLING THIS CRATE THROUGH A FEW OUTDATED CUSTOMS CHECKPOINTS, WE'VE THE NEXT BEST THING! \
-		A FUCKING LIGHT MACHINE GUN. DON'T WORRY, THE RUMORS ABOUT THE GUN MELTING YOU ARE JUST THAT! RUMORS! \
+		WE HAVE ACQUIRED A FEW HANDY TOOLS FOR EVADING SECURITY\
 		THESE THINGS WORK FINE! MIGHT BE SLIGHTLY DIRTY.!#@*$"
-	hidden = TRUE
-	cost = CARGO_CRATE_VALUE * 52
-	contains = list(
-		/obj/item/gun/ballistic/automatic/sol_rifle/machinegun = 1,
-		/obj/item/ammo_box/magazine/c40sol_rifle/drum = 2,
+	cost = CARGO_CRATE_VALUE * 30
+	contains = list(/obj/item/gun/ballistic/automatic/sol_rifle = 2,
+	/obj/item/ammo_box/magazine/c40sol_rifle = 4,
 	)
-*/ //BUBBER EDIT: IT'S AS BAD AS YOU THOUGHT
+	crate_name = "Counter Intelligence Crate"
+	hidden = TRUE
 
 /datum/supply_pack/imports/infanterie
-	name = "Carwil Battle Rifle Crate"
-	desc = "(*!&@#GOOD NEWS, OPERATIVE! WE GOT YOU THE BIG LEAGUE AUTOMATIC WEAPONS. BY \
+	name = "Romulus Assault Operative Crate"
+	desc = "(*!&@#GOOD NEWS, OPERATIVE! WE GOT SURPLUS EQUIPMENNT \
 		SMUGGLING THIS CRATE THROUGH A FEW OUTDATED CUSTOMS CHECKPOINTS, WE'VE THE NEXT BEST THING! \
 		SERVICE BATTLE RIFLE. DON'T WORRY, THE RUMORS ABOUT THE GUN MELTING YOU ARE JUST THAT! RUMORS! \
 		THESE THINGS WORK FINE! MIGHT BE SLIGHTLY DIRTY.!#@*$"
@@ -182,7 +151,7 @@
 	contains = list(/obj/item/gun/ballistic/automatic/sol_rifle = 2,
 	/obj/item/ammo_box/magazine/c40sol_rifle = 4,
 	)
-	crate_name = "Carwil Battle Rifle Crate"
+	crate_name = "Marine Raider Kit"
 	hidden = TRUE
 
 //Goodies
