@@ -3,7 +3,7 @@
 
 /datum/techweb_node/magazineresearch
 	id = "storedmunition_tech"
-	display_name = "Ballisitic Research"
+	display_name = "Military Grade Weaponry"
 	description = "In the wake of the CIN Border Conflict, we found ourselves surrounded by enemies of science and progress, to fight them, we must adapt."
 	prereq_ids = list("exotic_ammo")
 	design_ids = list(
@@ -19,7 +19,7 @@
 
 /datum/techweb_node/magazineresearch_romfed
 	id = "storedmunition_tech_two"
-	display_name = "Advanced Ballistic Research"
+	display_name = "High Impact Munitions"
 	description = "There was a time where folklores were dismissed as mere oral tradition, we predicted a cataclysmic have lead to destruction of the previous empires. We will be ready this time."
 	prereq_ids = list("explosives","storedmunition_tech")
 	design_ids = list(
@@ -39,8 +39,8 @@
 
 /datum/techweb_node/magazineresearch_heavy
 	id = "storedmunition_tech_three"
-	display_name = "Romulus Technology"
-	description = "The same technology used in the Sol 2351 Campaign. It is highly classified and resource intensive."
+	display_name = "Impproved Munitions"
+	description = "The absolute pinnacle limited by only what our fabricators can physically produces, anything beyond this may aswell be magic."
 	prereq_ids = list("syndicate_basic","storedmunition_tech_two")
 	design_ids = list(
 		"m9mm_mag_ext_hp",
