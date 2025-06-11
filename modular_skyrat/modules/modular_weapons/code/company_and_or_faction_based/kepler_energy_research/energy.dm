@@ -24,7 +24,7 @@ Lever Rifle
 /obj/item/gun/energy/laser/lever/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/empprotection, EMP_PROTECT_SELF|EMP_PROTECT_CONTENTS)
-	AddComponent(, \
+	AddComponent( \
 		/datum/component/crank_recharge, \
 		charging_cell = get_cell(), \
 		spin_to_win = TRUE, \
