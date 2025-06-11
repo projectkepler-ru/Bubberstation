@@ -1,7 +1,11 @@
-// At the end of the day, we make choices we don't want to make, because we hope it'll pay off, but this is a choice I will make.
+// At the end of the day, we make choices we don't want to make, because we hope it'll pay off, but this is a choice I will make so that I can regret my action than inaction.
 /*
 Coil Rifle
 */
+// Some background, this rifle is indeed based on the Citadel Station magnetic rifle.  Initially, I was going to actually make it a 1:1 of it but I realised it wasn't interesting enough, I didn't have support for it either
+// The desire to make this gun is not new by any means, I had always wanted to eventually phase out every ballistic and replace it with something like MCR on every level, it didn't happen.
+// What ended up happening is that necromanceranne would PR the BR-38. and this is where we are now
+// This is a gun that is made by anne, it's writing is my own. The code and it's soul is not. Ask me about the guns, ask her about the code. and to be honest I don't actually know who made the original gun or sprites. What I am making now is a parody of a perceived utopia.
 
 /obj/item/gun/ballistic/automatic/coilgun
 	name = "\improper RomTech MEC-1E"
@@ -25,8 +29,8 @@ Coil Rifle
 	fire_delay = 2
 	burst_size = 1
 	actions_types = list()
-	spread = 7
-	fire_sound = 'sound/items/weapons/thermalpistol.ogg'
+	spread = 5
+	fire_sound = 'modular_skyrat/modules/modular_weapons/sounds/smg_heavy.ogg'
 	suppressor_x_offset = 8
 
 	/// Determines how many shots we can make before the weapon needs to be maintained.
@@ -38,15 +42,13 @@ Coil Rifle
 	/// Maximum degradation stage.
 	var/degradation_stage_max = 10
 	/// The probability of degradation increasing per shot.
-	var/degradation_probability = 10
+	var/degradation_probability = 5
 	/// The maximum speed malus for projectile flight speed. Projectiles probably shouldn't move too slowly or else they will start to cause problems.
 	var/maximum_speed_malus = 0.7
-
-	/// Whether or not our gun is suffering an EMP related malfunction.
+	/// The maximum spread malus for projectile random spread variation. Projectiles probably shouldn't have too high spread else it can hit walls instead. - Necromanceranne
+	var/maximum_spread_malus = 12
+	/// Whether or not our gun is suffering an EMP related malfunction. Bear in mind unlike the BR38 this does not jam unless EMP'd
 	var/emp_malfunction = FALSE
-
-	/// Our timer for when our gun is suffering an extreme malfunction. AKA it is going to explode
-	var/explosion_timer
 
 	SET_BASE_PIXEL(-8, 0)
 
@@ -64,7 +66,7 @@ Coil Rifle
 	. += span_info("The MEC-1E possesses an acceleration rail that launches bullets at higher than typical velocity.\
 		This allows even less powerful cartridges to put out significant amounts of stopping power.")
 
-	. += span_notice("<b><i>However, you also remember some of the rumors...  </i></b>")
+	. += span_notice("<b><i>You remember being taught about this in your firearm history course</i></b>")
 
 	. += span_notice("Developed by 'The Citadel' Prior to construction of Space Station 13. It was intended to be a replacement for the aging RT-M4A\
 		Which by this point was no longer being produced due to improved technology in manufacturing. Relegating gunpowder-based firearm to only hardline conservatives \
@@ -129,7 +131,7 @@ Coil Rifle
 
 
 /obj/item/gun/ballistic/automatic/coilgun/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
-	if(chambered.loaded_projectile && prob(75) && (emp_malfunction || degradation_stage == degradation_stage_max))
+	if(chambered.loaded_projectile && prob(81) && (emp_malfunction))
 		balloon_alert_to_viewers("*click*")
 		playsound(src, dry_fire_sound, dry_fire_sound_volume, TRUE)
 		return
@@ -143,7 +145,8 @@ Coil Rifle
 
 	degradation_stage = clamp(degradation_stage + (obj_flags ? 2 : 1), 0, degradation_stage_max)
 	projectile_speed_multiplier = clamp(initial(projectile_speed_multiplier) + degradation_stage * 0.1, initial(projectile_speed_multiplier), maximum_speed_malus)
-	fire_delay = initial(fire_delay) + (degradation_stage * 0.5)
+	spread = clamp(initial(spread) + (degradation_stage * 0.5), maximum_spread_malus)
+	fire_delay = clamp(initial(fire_delay) + (degradation_stage * 0.5), 5)
 	do_sparks(1, TRUE, src)
 	update_appearance()
 
@@ -158,10 +161,12 @@ Coil Rifle
 		degradation_stage = clamp(degradation_stage - 1, 0, degradation_stage_max)
 		if(degradation_stage)
 			projectile_speed_multiplier = clamp(initial(projectile_speed_multiplier) - degradation_stage * 0.1, maximum_speed_malus, initial(projectile_speed_multiplier))
-			fire_delay = initial(fire_delay) + (degradation_stage * 0.5)
+			spread = clamp(initial(spread) + (degradation_stage * 0.5), maximum_spread_malus)
+			fire_delay = clamp(initial(fire_delay) + (degradation_stage * 0.5), 5)
 		else
 			projectile_speed_multiplier = initial(projectile_speed_multiplier)
 			fire_delay = initial(fire_delay)
+			spread = initial(spread)
 
 	update_appearance()
 
