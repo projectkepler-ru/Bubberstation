@@ -27,9 +27,9 @@ Lever Rifle
 	AddComponent( \
 		/datum/component/crank_recharge, \
 		charging_cell = get_cell(), \
-		charge_amount = STANDARD_CELL_CHARGE,  \
-		cooldown_time = 0.1 SECONDS, \
+		charge_amount = STANDARD_CELL_CHARGE, \
+		cooldown_time = 2 SECONDS, \
 		charge_sound = 'sound/items/weapons/kinetic_reload.ogg', \
-		charge_sound_cooldown_time = 0.6 SECONDS, \
-		charge_move = IGNORE_USER_LOC_CHANGE
+		charge_sound_cooldown_time = 0.8 SECONDS, \
+		charge_move = IGNORE_USER_LOC_CHANGE, \
 	)
