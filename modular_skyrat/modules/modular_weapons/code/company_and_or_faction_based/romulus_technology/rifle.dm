@@ -131,7 +131,7 @@ Coil Rifle
 
 
 /obj/item/gun/ballistic/automatic/coilgun/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
-	if(chambered.loaded_projectile && prob(81) && (emp_malfunction))
+	if(chambered.loaded_projectile && prob(43) && (emp_malfunction))
 		balloon_alert_to_viewers("*click*")
 		playsound(src, dry_fire_sound, dry_fire_sound_volume, TRUE)
 		return
