@@ -5,7 +5,7 @@ Lever Rifle
 /obj/item/gun/energy/laser/lever //the common parent of these guns, it just shoots hard bullets, somoene might like that?
 	name = "hardlight rifle"
 	desc = "The frontier is crawling with danger.  The Kepler 'Winchester ELA' was born from a requirement to cheaply arm colonists\
-	combined with rewoken nostalgia for the old west. Produced in house by NanoTrasen, the Winchester II uses a lever action to charge it's internal cell,\
+	combined with rewoken nostalgia for the old west. Produced in house by Nanotrasen, the Winchester II uses a lever action to charge it's internal cell,\
 	which then discharges a single shot. A punchy, affordable and simple weapon that evokes old school self reliance.\
 	A perfect companion piece on the wagon trail to the stars.."
 	icon_state = "infernopistol"
