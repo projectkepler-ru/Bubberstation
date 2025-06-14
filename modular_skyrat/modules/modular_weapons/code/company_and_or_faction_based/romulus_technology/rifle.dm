@@ -145,8 +145,8 @@ Coil Rifle
 
 	degradation_stage = clamp(degradation_stage + (obj_flags ? 2 : 1), 0, degradation_stage_max)
 	projectile_speed_multiplier = clamp(initial(projectile_speed_multiplier) + degradation_stage * 0.1, initial(projectile_speed_multiplier), maximum_speed_malus)
-	spread = clamp(initial(spread) + (degradation_stage * 0.5), maximum_spread_malus)
-	fire_delay = clamp(initial(fire_delay) + (degradation_stage * 0.5), 5)
+	spread = clamp(initial(spread) + (degradation_stage * 0.5), initial(spread), maximum_spread_malus)
+	fire_delay = clamp(initial(fire_delay) + (degradation_stage * 0.5),initial(fire_delay) , 5)
 	do_sparks(1, TRUE, src)
 	update_appearance()
 
@@ -161,8 +161,8 @@ Coil Rifle
 		degradation_stage = clamp(degradation_stage - 1, 0, degradation_stage_max)
 		if(degradation_stage)
 			projectile_speed_multiplier = clamp(initial(projectile_speed_multiplier) - degradation_stage * 0.1, maximum_speed_malus, initial(projectile_speed_multiplier))
-			spread = clamp(initial(spread) + (degradation_stage * 0.5), maximum_spread_malus)
-			fire_delay = clamp(initial(fire_delay) + (degradation_stage * 0.5), 5)
+			spread = clamp(initial(spread) + (degradation_stage * 0.5), initial(spread), maximum_spread_malus)
+			fire_delay = clamp(initial(fire_delay) + (degradation_stage * 0.5), initial(fire_delay) , 5)
 		else
 			projectile_speed_multiplier = initial(projectile_speed_multiplier)
 			fire_delay = initial(fire_delay)
