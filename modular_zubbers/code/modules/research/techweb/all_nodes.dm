@@ -128,7 +128,6 @@
 	design_ids += "s12g_incinslug"
 	design_ids += "wt550_ammo_normal"
 	design_ids += "sol35_shortextmag"
-	design_ids += "sol40_riflemag"
 	design_ids += "solgrenade_mag"
 	. = ..()
 
